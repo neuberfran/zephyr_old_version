@@ -1,4 +1,4 @@
-/diegosueiro3/rpmsg-lite/zephyr/samples/subsys/ipc/rpmsg_lite/remote_echo/build/pico_pi_m4$ cmake -DBOARD=pico_pi_m4 ../..
+rpmsg-lite/zephyr/samples/subsys/ipc/rpmsg_lite/remote_echo/build/pico_pi_m4$ cmake -DBOARD=pico_pi_m4 ../..
 -- Selected BOARD pico_pi_m4
 Zephyr version: 1.13.99
 Parsing Kconfig tree in /home/neuberfran/diegosueiro3/rpmsg-lite/zephyr/samples/subsys/ipc/rpmsg_lite/remote_echo/Kconfig
