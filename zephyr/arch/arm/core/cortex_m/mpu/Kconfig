@@ -1,0 +1,30 @@
+# Kconfig - Memory Protection Unit (MPU) configuration options
+
+#
+# Copyright (c) 2017 Linaro Limited
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config ARM_MPU
+	bool "ARM MPU Support"
+	depends on CPU_HAS_MPU
+	select THREAD_STACK_INFO
+	select ARCH_HAS_EXECUTABLE_PAGE_BIT
+	select MPU_REQUIRES_POWER_OF_TWO_ALIGNMENT if !(CPU_HAS_NXP_MPU || ARMV8_M_BASELINE || ARMV8_M_MAINLINE)
+	help
+	  MCU implements Memory Protection Unit.
+	  Note that NXP MPU as well as ARMv8-M MPU does not require MPU regions
+	  to have power-of-two alignment for base address and region size.
+
+config MPU_STACK_GUARD
+	bool "Thread Stack Guards"
+	depends on ARM_MPU
+	help
+	  Enable Thread Stack Guards via MPU
+
+config MPU_ALLOW_FLASH_WRITE
+	bool "Add MPU access to write to flash"
+	depends on ARM_MPU
+	help
+	  Enable this to allow MPU RWX access to flash memory

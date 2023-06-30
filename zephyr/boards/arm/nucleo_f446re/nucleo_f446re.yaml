@@ -1,0 +1,9 @@
+identifier: nucleo_f446re
+name: NUCLEO-F446RE
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - rtc

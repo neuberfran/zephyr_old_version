@@ -1,0 +1,21 @@
+# Copyright (c) 2020-2023, NXP
+# SPDX-License-Identifier: Apache-2.0
+
+config DMA_MCUX_LPC
+	bool "MCUX LPC DMAC driver"
+	default y
+	depends on DT_HAS_NXP_LPC_DMA_ENABLED
+	help
+	  DMA driver for MCUX LPC MCUs.
+
+if DMA_MCUX_LPC
+
+config DMA_NUMBER_OF_DESCRIPTORS
+	int "Number of DMA descriptors to use"
+	default 16
+	help
+	  Each DMA descriptor can be used to transfer (1024*width) bytes of data.
+	  Increase or decrease this value depending on the max number of data
+	  transferred by the application.
+
+endif # DMA_MCUX_LPC

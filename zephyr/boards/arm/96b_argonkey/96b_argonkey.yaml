@@ -1,0 +1,9 @@
+identifier: 96b_argonkey
+name: 96Boards Argonkey
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - rtc

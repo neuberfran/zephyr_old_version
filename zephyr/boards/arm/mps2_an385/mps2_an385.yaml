@@ -1,0 +1,8 @@
+identifier: mps2_an385
+name: ARM V2M MPS2
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools

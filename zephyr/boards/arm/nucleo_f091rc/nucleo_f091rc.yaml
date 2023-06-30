@@ -1,0 +1,11 @@
+identifier: nucleo_f091rc
+name: NUCLEO-F091RC
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 32
+flash: 256
+supported:
+  - i2c

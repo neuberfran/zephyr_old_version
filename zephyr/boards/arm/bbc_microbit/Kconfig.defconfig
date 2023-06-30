@@ -1,0 +1,35 @@
+# Kconfig - nRF51 BBC_MICROBIT board configuration
+#
+# Copyright (c) 2016 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_BBC_MICROBIT
+
+config BOARD
+	default "bbc_microbit"
+
+if I2C
+
+config I2C_NRFX
+	def_bool y
+
+if I2C_NRFX
+
+config I2C_0
+	def_bool y
+
+endif #I2C_NRFX
+
+if I2C_0
+
+choice I2C_0_NRF_TYPE
+	default I2C_0_NRF_TWI
+
+endchoice
+
+endif # I2C_0
+
+endif # I2C
+
+endif # BOARD_BBC_MICROBIT

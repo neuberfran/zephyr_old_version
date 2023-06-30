@@ -1,0 +1,14 @@
+identifier: stm32f3_disco
+name: STM32F3DISCOVERY
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 40
+supported:
+  - gpio
+  - i2c
+  - rtc
+  - spi
+  - usb_device

@@ -1,0 +1,16 @@
+---
+title: STM32 F4 Flash Controller
+id: st,stm32f4-flash-controller
+version: 0.1
+
+description: >
+    This binding gives a base representation of the STM32 F4 Flash Controller
+
+inherits:
+    !include flash-controller.yaml
+
+properties:
+    compatible:
+      constraint: "st,stm32f4-flash-controller"
+
+...

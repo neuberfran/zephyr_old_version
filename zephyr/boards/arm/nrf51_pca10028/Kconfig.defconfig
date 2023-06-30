@@ -1,0 +1,12 @@
+# Kconfig - nRF51 PCA10028 board configuration
+#
+# Copyright (c) 2016 Linaro Limited.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_NRF51_PCA10028
+
+config BOARD
+	default "nrf51_pca10028"
+
+endif # BOARD_NRF51_PCA10028

@@ -1,0 +1,7 @@
+sample:
+  name: NVS Sample
+
+tests:
+  test:
+    tags: samples
+    depends_on: nvs

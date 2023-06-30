@@ -1,0 +1,75 @@
+
+if BOARD_NATIVE_POSIX
+
+config BUILD_OUTPUT_BIN
+	default n
+
+config BUILD_OUTPUT_EXE
+	default y
+
+config OUTPUT_PRINT_MEMORY_USAGE
+	default n
+
+config BOARD
+	default "native_posix"
+
+if NETWORKING
+
+config NET_L2_ETHERNET
+	def_bool y if !NET_LOOPBACK && !NET_TEST
+
+config ETH_NATIVE_POSIX
+	def_bool y if NET_L2_ETHERNET
+
+endif # NETWORKING
+
+if ENTROPY_GENERATOR
+
+config FAKE_ENTROPY_NATIVE_POSIX
+	def_bool y
+
+endif # ENTROPY_GENERATOR
+
+if BT_HCI
+
+choice BT_HCI_BUS_TYPE
+	default BT_USERCHAN
+endchoice
+
+endif # BT_HCI
+
+if SERIAL
+
+config UART_NATIVE_POSIX
+	def_bool y
+
+endif # SERIAL
+
+if LOG
+
+config LOG_BACKEND_NATIVE_POSIX
+	def_bool y if !SERIAL
+
+# For native_posix we can log immediately without any problem
+# Doing so will be nicer for debugging
+config LOG_INPLACE_PROCESS
+	def_bool y
+
+# If we set LOG_INPLACE_PROCESS, there is no need to have the logging thread
+# running
+config LOG_PROCESS_THREAD
+	def_bool n
+
+endif # LOG
+
+if CONSOLE
+
+config NATIVE_POSIX_CONSOLE
+	def_bool y if !SERIAL
+
+config UART_CONSOLE
+	def_bool y if SERIAL
+
+endif #CONSOLE
+
+endif # BOARD_NATIVE_POSIX

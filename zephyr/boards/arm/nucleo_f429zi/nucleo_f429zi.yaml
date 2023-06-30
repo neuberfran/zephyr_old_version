@@ -1,0 +1,17 @@
+identifier: nucleo_f429zi
+name: NUCLEO-F429ZI
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 256
+flash: 2048
+supported:
+  - netif:eth
+  - i2c
+  - spi
+  - gpio
+  - pwm
+  - rtc
+  - usb_device

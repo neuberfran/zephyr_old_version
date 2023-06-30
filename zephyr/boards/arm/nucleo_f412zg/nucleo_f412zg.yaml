@@ -1,0 +1,16 @@
+identifier: nucleo_f412zg
+name: NUCLEO-F412ZG
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 256
+flash: 1024
+supported:
+  - pwm
+  - i2c
+  - spi
+  - gpio
+  - usb_device
+  - rtc

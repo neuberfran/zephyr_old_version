@@ -1,0 +1,10 @@
+identifier: sam_e70_xplained
+name: SAM E70 Xplained
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+supported:
+  - netif:eth
+  - adc
