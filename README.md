@@ -21,17 +21,6 @@ Call Stack (most recent call first):
   CMakeLists.txt:4 (include)
 
 
--- Generating zephyr/include/generated/generated_dts_board.h
--- Cache files will be written to: /home/neuberfran/.cache/zephyr
--- 
-*******************************
-*** NOTE TO KCONFIG AUTHORS ***
-*******************************
-
-The behavior of Kconfig 'default' properties in Zephyr has changed. The 
-earliest default with a satisfied condition is now used, instead of the 
-last one. This is standard Kconfig behavior.
-
 See http://docs.zephyrproject.org/latest/porting/board_porting.html#old-zephyr-kconfig-behavior-for-defaults.
 
 To get rid of this note, create a file called 'hide-defaults-note' in the 
