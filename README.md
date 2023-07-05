@@ -1,3 +1,5 @@
+https://github.com/diegosueiro/rpmsg-lite/wiki
+
 make
 
 [  1%] Built target kobj_types_h_target
