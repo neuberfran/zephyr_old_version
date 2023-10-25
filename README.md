@@ -1,3 +1,7 @@
+Place where I found a very similar issue but it still didn't help:
+https://github.com/zephyrproject-rtos/zephyr/issues/1464
+
+Original project:
 https://github.com/diegosueiro/rpmsg-lite/wiki
 
 make
