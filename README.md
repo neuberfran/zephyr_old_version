@@ -5,6 +5,8 @@ Original project:
 https://github.com/diegosueiro/rpmsg-lite/wiki
 
 cmake -DBOARD=pico_pi_m4 ../..
+
+
 -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.4") 
 -- Selected BOARD pico_pi_m4
 Zephyr version: 1.13.99
